@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Set a minimum padding and margin for all elements */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+
+    form h2 {
+        font-size: 1.5em;
+    }
+}
+
+section .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section .trees {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+
+section .girl {
+    position: absolute;
+    transform: scale(0.65);
+    pointer-events: none;
+    animation: animateGirl 15s linear infinite;
+}
+
+@keyframes animateGirl {
+    0% {
+        transform: translateX(calc(100% + 100vw));
+    }
+    50% {
+        transform: translateX(calc(-100% - 100vw));
+    }
+    50.01% {
+        transform: translateX(calc(-100% - 100vw)) rotateY(180deg);
+    }
+    100% {
+        transform: translate(calc(100% + 100vw)) rotateY(180deg);
+    }
+}
+
+form {
+    position: relative;
+    padding: 3% 4%; /* Using relative units for padding */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(255, 255, 255, 0.1);
+}
+
+form p {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form h2 {
+    position: relative;
+    text-align: center;
+    font-size: 2.0em;
+    color: #8f2c24;
+    margin-bottom: 10px;
+}
+
+form input {
+    position: relative;
+    padding: 10px;
+    font-size: 1.0em;
+    width: 55%; 
+    color: #8f2c24;
+    margin-bottom: 20px;
+}
+
+form input::placeholder {
+    position: relative;
+    color: #8f2c24;
+}
+
+form button {
+    position: relative;
+    border: none;
+    background: #8f2c24;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    height: 40px; 
+    width: 40%; 
+}
+
+form button:hover {
+    background-color: orangered;
+}
+
+.leaves {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.leaves .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.leaves .set div {
+    position: absolute;
+    display: block;
+}
+
+.leaves .set div:nth-child(1) {
+    left: 20%;
+    animation: animate 20s linear infinite;
+}
+
+.leaves .set div:nth-child(2) {
+    left: 50%;
+    animation: animate 14s linear infinite;
+}
+
+.leaves .set div:nth-child(3) {
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.leaves .set div:nth-child(4) {
+    left: 5%;
+    animation: animate 15s linear infinite;
+}
+
+.leaves .set div:nth-child(5) {
+    left: 85%;
+    animation: animate 18s linear infinite;
+}
+
+.leaves .set div:nth-child(6) {
+    left: 90%;
+    animation: animate 12s linear infinite;
+}
+
+.leaves .set div:nth-child(7) {
+    left: 15%;
+    animation: animate 14s linear infinite;
+}
+
+.leaves .set div:nth-child(8) {
+    left: 60%;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(180deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(20px) rotate(225deg);
+    }
+}
